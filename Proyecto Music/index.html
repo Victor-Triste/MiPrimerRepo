@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!--Player-->
+    <main class="player">
+        <!--Titulo-->
+        <h1 class="titulo" id="titulo"></h1>
+        <!--caratula-->
+        <img src="" alt="" class="cover" id="caratula">
+        <!--Audio HTML Media element-->
+        <audio src="" id="audio"></audio>
+        <!--Barra de progreso-->
+        <div class="barra-container" id="barraContainer">
+            <section id="barraProgreso" class="progeso"></section>
+        </div>
+        <!--controles-->
+        <section class="controles">
+            <button class="prev" >
+                <i id="prev" class="fas fa-backward"></i>
+            </button>
+
+            <button class="play" >
+                <i id="play" class="fas fa-play"></i>
+            </button>
+
+            <button class="next" >
+                <i id="next" class="fas fa-forward"></i>
+            </button>
+            <button class="volumen">
+                <i id="volume" class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" id="volumen" class="volumen" min=0 max=1 value=0.5 step=0.1 onInput="$('#rangeval').html(($(this).val()*100))">
+            <span id="rangeval">50<!-- Default value --></span>
+        </section>
+
+        <!--lista de canciones-->
+        <ul class="lista-canciones" id="canciones">
+            <!-- <li><a href="#">song 1</a></li>
+            <li><a class="active" href="#">song 2</a></li>
+            <li><a href="#">song 3</a></li> -->
+        </ul>
+    </main>
+</body>
+</html>
